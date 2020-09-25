@@ -2,17 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import Graph from "react-graph-vis";
 import './App.css';
+import {level1SP} from './levels.js'
+
 
 function App() {
-  const graph = {
-		nodes: [
-			{'id': 'teste', 'label': 'teste', 'title': 'teste'},
-			{'id': 'teste2', 'label': 'teste2', 'title': 'teste2'},
-		],
-		edges:[
-			{'from': 'teste', 'to': 'teste2', 'label': '120'}
-		]
-  };
+  const graph = level1SP;
  
   const options = {
     layout: {
