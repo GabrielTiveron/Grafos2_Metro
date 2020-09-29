@@ -2,12 +2,21 @@
   text-align: center;
 }
 
-.todo-row:nth-child(4n + 3) {
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
   background: linear-gradient(
     90deg,
-    rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
+		rgba(50,205,50, 1) 0%,
+		rgba(50,161,47, 1) 100%
   );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
 }
 .icons {
   display: flex;

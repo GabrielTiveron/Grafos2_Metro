@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import {levelSP} from '../levels.js'
+import React from 'react';
 
 const List = ({selectedList}) => {
  
@@ -10,7 +9,7 @@ const List = ({selectedList}) => {
       key={index}
     >
       <div key={todo.id}>
-        {todo.text}
+        {todo.label}
       </div>
     </div>
   ));

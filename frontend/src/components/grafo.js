@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import Graph from "react-graph-vis";
 import {levelSP} from '../levels.js'
 
-const Grafo = ({events, graph}) => {
+const Grafo = ({events, network}) => {
+  const [graph, setGraph] = useState(levelSP);
  
   const options = {
     layout: {
@@ -15,7 +16,7 @@ const Grafo = ({events, graph}) => {
  
   return (
 			<Graph
-				style={{marginBottom: '0px', display: 'flex', flex: 1}}
+				getNetwork={network}
 				graph={graph}
 				options={options}
 				events={events}
