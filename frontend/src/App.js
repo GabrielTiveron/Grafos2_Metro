@@ -1,34 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import Graph from "react-graph-vis";
+import React, {useState} from 'react';
+import Graph from './components/grafo.js'
 import './App.css';
-import {level1SP} from './levels.js'
+import List from './components/list.js'
+import {levelSP} from './levels.js'
 
-
-function App() {
-  const graph = level1SP;
- 
-  const options = {
-    layout: {
-    },
-    edges: {
-      color: "#000000"
-    },
-    height: "700px",
-  };
- 
+const App = () => {
+  const [graph, setGraph] = useState(levelSP);
+	const [selectedList, setSelectedList] = useState([]);
   const events = {
     select: function(event) {
       var { nodes, edges } = event;
+			var newGraph = graph;
+			newGraph.nodes.forEach((item, index) => {
+				if (item.id === nodes[0]){
+					newGraph.nodes[index] = {...item, 'color': 'red'}
+					setSelectedList([...selectedList, item]);
+				}
+			})
+			setGraph(newGraph);
     }
   };
   return (
-			<Graph
-				style={{marginBottom: '0px', display: 'flex', flex: 1}}
-				graph={graph}
-				options={options}
-				events={events}
-			/>
+		<div>
+			<div>
+				<List selectedList={selectedList}/>
+			</div>
+			<div style={{marginTop: '500px'}} >
+				<Graph events={events} graph={graph}/>
+			</div>
+		</div>
   );
 }
 
