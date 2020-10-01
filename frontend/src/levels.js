@@ -1,31 +1,109 @@
 export const levelSP = {
 		nodes: [
-			{'id': 'sp_jundiai', 'label': 'Jundiai'},
-			{'id': 'sp_barra_funda', 'label': 'Barra Funda'},
-			{'id': 'sp_se', 'label': 'Sé'},
-			{'id': 'sp_bras', 'label': 'Brás'},
-			{'id': 'sp_amador_bueno', 'label': 'Amador Bueno'},
-			{'id': 'sp_osasco', 'label': 'Osasco'},
-			{'id': 'sp_pres_altino', 'label': 'Pres. Altino'},
-			{'id': 'sp_pinheiros', 'label': 'Pinheiros'},
-			{'id': 'sp_morumbi', 'label': 'Morumbi'},
-			{'id': 'sp_santo_amaro', 'label': 'Santo Amaro'},
-			{'id': 'sp_grajau', 'label': 'Grajaú'},
-			{'id': 'sp_paraiso', 'label': 'Paraíso'},
-			{'id': 'sp_ana_rosa', 'label': 'Ana Rosa'},
-			{'id': 'sp_paulista', 'label': 'Paulista'},
-			{'id': 'sp_vila_madalena', 'label': 'Vila Madalena'},
-			{'id': 'sp_butanta', 'label': 'Butantã'},
-			{'id': 'sp_tamanduatei', 'label': 'Tamanduateí'},
-			{'id': 'sp_rio_grande_serra', 'label': 'Rio Grande da Serra'},
-			{'id': 'sp_santo_andre', 'label': 'Santo André'},
-			{'id': 'sp_sao_mateus', 'label': 'São Mateus'},
-			{'id': 'sp_capao_redondo', 'label': 'Capão Redondo'},
-			{'id': 'sp_tucuruvi', 'label': 'Tucuruvi'},
-			{'id': 'sp_vila_prudente', 'label': 'Vila Prudente'},
-			{'id': 'sp_republica', 'label': 'República'},
-			{'id': 'sp_estudantes', 'label': 'Estudantes'},
-			{'id': 'sp_luz', 'label': 'Luz'},
+			{'id': 'sp_jundiai', 'label': 'Jundiai', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_barra_funda', 'label': 'Barra Funda', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_se', 'label': 'Sé', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_bras', 'label': 'Brás', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_amador_bueno', 'label': 'Amador Bueno', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_osasco', 'label': 'Osasco', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_pres_altino', 'label': 'Pres. Altino', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_pinheiros', 'label': 'Pinheiros', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_morumbi', 'label': 'Morumbi', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_santo_amaro', 'label': 'Santo Amaro', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_grajau', 'label': 'Grajaú', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_paraiso', 'label': 'Paraíso', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_ana_rosa', 'label': 'Ana Rosa', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_paulista', 'label': 'Paulista', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_vila_madalena', 'label': 'Vila Madalena', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_butanta', 'label': 'Butantã', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_tamanduatei', 'label': 'Tamanduateí', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_rio_grande_serra', 'label': 'Rio Grande da Serra', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_santo_andre', 'label': 'Santo André', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_sao_mateus', 'label': 'São Mateus', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_capao_redondo', 'label': 'Capão Redondo', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_tucuruvi', 'label': 'Tucuruvi', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_vila_prudente', 'label': 'Vila Prudente', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_republica', 'label': 'República', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_estudantes', 'label': 'Estudantes', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
+			{'id': 'sp_luz', 'label': 'Luz', 'color': {
+				'background': 'rgba(79,192,206, 1)',
+				'border': 'rgba(4,165,186, 1)'
+			}},
 		],
 		edges:[
 			{'from': 'sp_jundiai', 'to': 'sp_barra_funda', 'label': '0'},

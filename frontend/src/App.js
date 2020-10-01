@@ -25,8 +25,6 @@ const App = () => {
 			var newGraph = graph;
 			newGraph.nodes.forEach((item, index) => {
 				if (item.id === nodes[0]){
-				}
-				if (item.id === nodes[0]){
 					var newItem = true;
 					selectedList.forEach((lista, index) => {
 						if(lista.id === item.id)
@@ -56,7 +54,10 @@ const App = () => {
 	const apagarEstacoes = () => {
 		var newGraph = graph;
 		graph.nodes.forEach((item, index) => {
-			newGraph.nodes[index].color = null;
+			newGraph.nodes[index].color = {
+				background: 'rgba(79,192,206, 1)',
+				border: 'rgba(4,165,186, 1)'
+			};
 		});
 		setGraph(newGraph);
 		network.setData(graph);
