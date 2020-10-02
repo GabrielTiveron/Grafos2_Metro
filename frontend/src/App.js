@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import Graph from './components/grafo.js'
 import './App.css';
 import List from './components/list.js'
-import {levelSP} from './levels.js'
+import {level} from './levels.js'
+import Djikstra from './components/backend.js'
 
 function checkNode(graph, list, newItem){
 	console.log('new item', newItem)
@@ -16,7 +17,7 @@ function checkNode(graph, list, newItem){
 	return validation;
 }
 const App = () => {
-  const [graph, setGraph] = useState(levelSP);
+  const [graph, setGraph] = useState(level.levelSP);
 	const [selectedList, setSelectedList] = useState([]);
   const [network, setNetwork] = useState();
   const events = {
@@ -67,6 +68,7 @@ const App = () => {
 		<div style={{display: 'flex'}}>
 			<div>
 				<List selectedList={selectedList}/>
+//        <Djikstra graph={graph} selectedList={selectedList} />
 				<button className={'todo-row'} onClick={apagarEstacoes}>
 					Apagar estações
 				</button>

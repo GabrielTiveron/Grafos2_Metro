@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import Graph from "react-graph-vis";
-import {levelSP} from '../levels.js'
+import {level} from '../levels.js'
 
 const Grafo = ({events, network}) => {
-  const [graph, setGraph] = useState(levelSP);
+  const [graph, setGraph] = useState(level.levelSP);
  
   const options = {
     layout: {
