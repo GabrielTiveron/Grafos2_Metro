@@ -26,14 +26,9 @@ function getAdjList(list, id){
   return arr;
 };
 
-const Djikstra = ({graph, selectedList}) => {
+export const Djikstra = (graph, selectedList) => {
 
-  if(selectedList.length == 0){
-    return(<div />)
-  }
-  const begin = selectedList[0]
-  const end = selectedList[selectedList.length-1]
-
+  const begin = selectedList
   
   var PQinit = []
   var priority = []
@@ -72,7 +67,7 @@ const Djikstra = ({graph, selectedList}) => {
       console.log('asuhuashaushuahs', t)
       t.forEach((edge, index) => {
         //console.log(v, '$$$$$$$$$$$$$', edge)
-        let adj = newgraph.edges.find(elem => elem.from==v && elem.to==edge).label
+        let adj = newgraph.edges.find(elem => elem.from==edge && elem.to==v).label
         //if(adj != 0)
         if(adj + wt[v] < wt[w = edge]){
           console.log("HEHE", w)
@@ -87,10 +82,5 @@ const Djikstra = ({graph, selectedList}) => {
   console.log("STzada", wt)
   
 
-  return (
-    <div />
-  );
+  return wt
 }
-
-export default Djikstra;
-

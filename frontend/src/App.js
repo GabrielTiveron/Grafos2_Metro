@@ -3,7 +3,7 @@ import Graph from './components/grafo.js'
 import './App.css';
 import List from './components/list.js'
 import {level} from './levels.js'
-import Djikstra from './components/backend.js'
+import {Djikstra} from './backend/backend.js'
 
 function checkNode(graph, list, newItem){
 	console.log('new item', newItem)
@@ -20,10 +20,22 @@ const App = () => {
   const [graph, setGraph] = useState(level.levelSP);
 	const [selectedList, setSelectedList] = useState([]);
   const [network, setNetwork] = useState();
+  const [stationE, setStationE] = useState(level.levelSP.nodes[Math.floor(Math.random()*26)]);
+  const [stationB, setStationB] = useState(level.levelSP.nodes[Math.floor(Math.random()*26)]);
+  const [caminho, setCaminho] = useState(0)
+  while(stationE.id == stationB.id)setStationB(level.levelSP.nodes[Math.floor(Math.random()*26)])
   const events = {
     selectNode: function(event) {
       var { nodes, edges } = event;
 			var newGraph = graph;
+      if(selectedList.length >= 1)
+      newGraph.edges.forEach(elem => {
+        console.log('To dentro')
+        if(elem.from == selectedList[selectedList.length-1].id && elem.to == nodes[0]){
+          console.log('ifzada')
+          setCaminho(caminho+parseInt(elem.label,10))
+        }
+      })
 			newGraph.nodes.forEach((item, index) => {
 				if (item.id === nodes[0]){
 					var newItem = true;
@@ -52,6 +64,7 @@ const App = () => {
 			network.setData(graph);
     }
   };
+
 	const apagarEstacoes = () => {
 		var newGraph = graph;
 		graph.nodes.forEach((item, index) => {
@@ -64,14 +77,31 @@ const App = () => {
 		network.setData(graph);
 		setSelectedList([])
 	}
+  const checarEstacoes = (value) => {
+    let a = Djikstra(graph, stationB)
+    if(selectedList.length >= 1)
+      if(selectedList[0].id == stationB.id && selectedList[selectedList.length-1].id == stationE.id)
+        if(a[stationE.id] == caminho){
+          alert('parabens')
+          window.location.reload(false);
+        }
+    console.log('CIDADES', stationE, stationB, caminho)
+  }
   return (
 		<div style={{display: 'flex'}}>
 			<div>
+        <h2>De: {stationB.label}</h2>
+        <h2>Para: {stationE.label}</h2>
 				<List selectedList={selectedList}/>
-//        <Djikstra graph={graph} selectedList={selectedList} />
-				<button className={'todo-row'} onClick={apagarEstacoes}>
+    <div style={{display: 'flex'}}>
+				<button className={'clean-doidera'} onClick={apagarEstacoes}>
 					Apagar estações
 				</button>
+        
+				<button className={'doidera-button'} onClick={checarEstacoes}>
+					Verificar
+				</button>
+    </div>
 			</div>
 			<div style={{marginLeft: '100px', width: '1100px', alignSelf: 'stretch'}}>
 				<Graph events={events} network={setNetwork}/>

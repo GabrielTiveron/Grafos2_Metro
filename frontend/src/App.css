@@ -10,6 +10,23 @@
   color: #fff;
   background: linear-gradient(
     90deg,
+	  rgba(249, 105, 14, 1) 0%,
+		rgba(211, 84, 0, 1) 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.doidera-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
 		rgba(50,205,50, 1) 0%,
 		rgba(50,161,47, 1) 100%
   );
@@ -18,6 +35,24 @@
   border-radius: 5px;
   width: 90%;
 }
+
+.clean-doidera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+		rgba(255,0,0, 1) 0%,
+	  rgba(139,0,0, 1)	 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
 .icons {
   display: flex;
   align-items: center;
