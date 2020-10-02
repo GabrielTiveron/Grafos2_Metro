@@ -74,20 +74,27 @@ const App = () => {
 			};
 		});
 		setGraph(newGraph);
+    setCaminho(0)
 		network.setData(graph);
 		setSelectedList([])
 	}
   const checarEstacoes = (value) => {
     let a = Djikstra(graph, stationB)
     if(selectedList.length >= 1)
-      if(selectedList[0].id == stationB.id && selectedList[selectedList.length-1].id == stationE.id)
+      if(selectedList[0].id == stationB.id && selectedList[selectedList.length-1].id == stationE.id){
         if(a[stationE.id] == caminho){
           alert('parabens')
           window.location.reload(false);
+        }else{
+          alert(`ERRRRRRRRRROOU, seu caminho tem custo de ${caminho} e o caminho correto é de ${a[stationE.id]}. Não desista!`)
         }
+      }
+        
     console.log('CIDADES', stationE, stationB, caminho)
   }
   return (
+    <div>
+    <h1>Encontre o menor caminho entre as estações</h1>
 		<div style={{display: 'flex'}}>
 			<div>
         <h2>De: {stationB.label}</h2>
@@ -107,6 +114,7 @@ const App = () => {
 				<Graph events={events} network={setNetwork}/>
 			</div>
 		</div>
+    </div>
   );
 }
 
