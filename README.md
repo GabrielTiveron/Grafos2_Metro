@@ -6,26 +6,24 @@
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| 17/0103471  |  Gabrie Marques Tiveron |
+| 17/0103471  |  Gabriel Marques Tiveron |
 | 17/0115208  |  Victor Levi Peixoto |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+O projeto tem como objetivo testar a capacidade humana de percorer um grafo, o programa realiza a busca do menor caminho possível por meio do algorítmo de dijkstra, o mesmo está sempre certo e cabe ao usuário tentar escolher o melhor caminho.
+
+O projeto se baseia na linha de metrô de São Paulo, algo que pode ser útil e pode trazer certas lembranças ao usuário.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![Tutorial_1](./tutorial/Tutorial_1.png)
+![Tutorial_2](./tutorial/Tutorial_2.png)
+![Tutorial_3](./tutorial/Tutorial_3.png)
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: JavaScript<br>
+**Framework**: ReactJs<br>
+Ter o npm na versão 6.14.4
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
-
-
+Para executar o projeto basta ter o [npm](https://www.npmjs.com/get-npm) e instalar as dependências por meio do comando ```npm install``` dentro da pasta frontend
 
