@@ -61,19 +61,23 @@ export const Djikstra = (graph, selectedList) => {
 
   let ind = 0, w = 0;
   while(!(PQ === undefined || PQ.length == 0)){
-    console.log('HIHI')
     if(wt[v = PQ.shift()] != MAX_WT){
       let t = getAdjList(newgraph.edges, v)
-      console.log('asuhuashaushuahs', t)
+			console.log('v', v)
+      console.log('ajascencia', t)
       t.forEach((edge, index) => {
         //console.log(v, '$$$$$$$$$$$$$', edge)
-        let adj = newgraph.edges.find(elem => elem.from==edge && elem.to==v).label
+        let adj = newgraph.edges.find(elem => elem.from==v && elem.to==edge).label
         //if(adj != 0)
         if(adj + wt[v] < wt[w = edge]){
-          console.log("HEHE", w)
+          console.log("W", w)
           wt[w] = wt[v] + adj
-          PQ = [PQ.splice(PQ.findIndex(elem => elem==w), 1)[0], ...PQ]
+					if (PQ.findIndex(elem => elem==w) === -1)
+						PQ = [w, ...PQ]
+					else
+						PQ = [PQ.splice(PQ.findIndex(elem => elem==w), 1)[0], ...PQ]
           st[w] = v
+          console.log("wt[w]", wt[w])
         }
       })
     }

@@ -80,7 +80,7 @@ const App = () => {
 	}
   const checarEstacoes = (value) => {
     let a = Djikstra(graph, stationB)
-    if(selectedList.length >= 1)
+    if(selectedList.length >= 1){
       if(selectedList[0].id == stationB.id && selectedList[selectedList.length-1].id == stationE.id){
         if(a[stationE.id] == caminho){
           alert('parabens')
@@ -89,6 +89,10 @@ const App = () => {
           alert(`ERRRRRRRRRROOU, seu caminho tem custo de ${caminho} e o caminho correto é de ${a[stationE.id]}. Não desista!`)
         }
       }
+			else{
+				alert('As estações de início e de fim não coincidem com a requisitada')
+			}
+		}
         
     console.log('CIDADES', stationE, stationB, caminho)
   }
